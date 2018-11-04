@@ -1,0 +1,10 @@
+version: '3'
+services:
+  mqtt-broker:
+    image: eclipse-mosquitto
+    ports:
+      - "1833:1833"
+  api:
+    build: api
+    ports:
+      - "80:3000"
